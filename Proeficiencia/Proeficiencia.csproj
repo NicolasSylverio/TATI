@@ -56,6 +56,11 @@
     <Compile Include="Abstracao\IRepository.cs" />
     <Compile Include="CrossCutting\Enum\Cursos.cs" />
     <Compile Include="CrossCutting\Models\Aluno.cs" />
+    <Compile Include="Migrations\201908070307456_InitialCreate.cs" />
+    <Compile Include="Migrations\201908070307456_InitialCreate.Designer.cs">
+      <DependentUpon>201908070307456_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +72,9 @@
     <Compile Include="Repository\AlunoRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\Context.cs" />
+    <EmbeddedResource Include="Migrations\201908070307456_InitialCreate.resx">
+      <DependentUpon>201908070307456_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +97,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\.gitignore" />
+    <None Include="Resources\README.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

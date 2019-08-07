@@ -6,7 +6,7 @@ namespace Proeficiencia.Repository
 {
     public class Context : DbContext
     {
-        public Context() : base("Context")
+        public Context() : base("ConnectionString")
         {
         }
 
