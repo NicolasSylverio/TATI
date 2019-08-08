@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Proeficiencia.CrossCutting.Enum
+﻿namespace Proeficiencia.CrossCutting.Enum
 {
     public enum Cursos
     {
-        GTI = 1,
-        ADS = 2,
-        EVE = 3,
-        LOG = 4,
-        GAM = 5
+        Gti = 1,
+        Ads = 2,
+        Eve = 3,
+        Log = 4,
+        Gam = 5
     }
 }

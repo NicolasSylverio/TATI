@@ -7,28 +7,28 @@ namespace Proeficiencia.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        protected readonly Context _context;
+        protected readonly Context Context;
         protected readonly DbSet<TEntity> _dbSet;
 
-        public Repository(Context contexto = null)
+        protected Repository(Context contexto = null)
         {
             if(contexto == null)
             {
-                _context = new Context();
+                Context = new Context();
             }
             else
             {
-                _context = contexto;
+                Context = contexto;
             }
 
-            _dbSet = _context.Set<TEntity>();
+            _dbSet = Context.Set<TEntity>();
         }
 
         public virtual void Add(TEntity obj)
         {
             _dbSet.Add(obj);
 
-            _context.SaveChanges();
+            Context.SaveChanges();
         }
 
         public virtual TEntity GetById(Guid id)
@@ -45,24 +45,24 @@ namespace Proeficiencia.Repository
         {
             //  _dbSet.Update(obj);
 
-            _context.SaveChanges();
+            Context.SaveChanges();
         }
 
         public virtual void Remove(Guid id)
         {
-            _dbSet.Remove(_dbSet.Find(id));
+            _dbSet.Remove(_dbSet.Find(id) ?? throw new InvalidOperationException());
 
-            _context.SaveChanges();
+            Context.SaveChanges();
         }
 
         public int SaveChanges()
         {
-            return _context.SaveChanges();
+            return Context.SaveChanges();
         }
 
         public void Dispose()
         {
-            _context.Dispose();
+            Context.Dispose();
             GC.SuppressFinalize(this);
         }
     }

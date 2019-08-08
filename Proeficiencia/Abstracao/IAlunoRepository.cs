@@ -1,5 +1,4 @@
 ﻿using Proeficiencia.CrossCutting.Models;
-using System;
 
 namespace Proeficiencia.Abstracao
 {

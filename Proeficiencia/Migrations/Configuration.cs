@@ -1,7 +1,7 @@
 namespace Proeficiencia.Migrations
 {
-    using Proeficiencia.CrossCutting.Models;
-    using Proeficiencia.Repository;
+    using CrossCutting.Models;
+    using Repository;
     using System.Data.Entity.Migrations;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Context>

@@ -8,19 +8,19 @@ namespace Proeficiencia.Presentation
     public partial class CadastroAlunos : Form
     {
         private readonly AlunoRepository _alunoRepository;
-        private readonly Context _context;
 
         public CadastroAlunos()
         {
             InitializeComponent();
 
-            _context = new Context();
-            _alunoRepository = new AlunoRepository(_context);
+            _alunoRepository = new AlunoRepository(new Context());
         }
 
         private void CadastroAlunos_Load(object sender, EventArgs e)
         {
             dtpDataNascimento.Value = DateTime.Now.Date;
+
+            //todo: carregar combos.
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace Proeficiencia.Presentation
                 txtNome.Text = string.Empty;
                 txtRa.Text = string.Empty;
                 dtpDataNascimento.Value = DateTime.Now.Date;
-                //cmbCursos.SelectedIndex = 0;
+                // todo: carregar combo = cmbCursos.SelectedIndex = 0;
                 ckbMatriculado.Checked = false;
 
                 txtNome.Focus();

@@ -30,7 +30,7 @@ namespace Proeficiencia.Presentation
                     Close(); 
                 }
 
-                MessageBox.Show($"Usuario ou Senha Inválidos.", "Aviso Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario ou Senha Inválidos.", "Aviso Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
