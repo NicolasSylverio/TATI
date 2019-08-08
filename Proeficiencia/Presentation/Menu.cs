@@ -14,5 +14,19 @@ namespace Proeficiencia.Presentation
         {
 
         }
+
+        private void CadastraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var form = new CadastroAlunos();
+
+                form.ShowDialog(this);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro no Sistema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

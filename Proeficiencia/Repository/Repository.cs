@@ -10,7 +10,7 @@ namespace Proeficiencia.Repository
         protected readonly Context _context;
         protected readonly DbSet<TEntity> _dbSet;
 
-        public Repository(Context context)
+        public Repository()
         {
             _context = new Context();
             _dbSet = _context.Set<TEntity>();

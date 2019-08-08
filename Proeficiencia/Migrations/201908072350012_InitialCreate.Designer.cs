@@ -13,7 +13,7 @@ namespace Proeficiencia.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201908070307456_InitialCreate"; }
+            get { return "201908072350012_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

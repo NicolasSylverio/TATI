@@ -53,14 +53,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstracao\IAlunoRepository.cs" />
     <Compile Include="Abstracao\IRepository.cs" />
     <Compile Include="CrossCutting\Enum\Cursos.cs" />
     <Compile Include="CrossCutting\Models\Aluno.cs" />
-    <Compile Include="Migrations\201908070307456_InitialCreate.cs" />
-    <Compile Include="Migrations\201908070307456_InitialCreate.Designer.cs">
-      <DependentUpon>201908070307456_InitialCreate.cs</DependentUpon>
+    <Compile Include="CrossCutting\Models\ResponseBag.cs" />
+    <Compile Include="Migrations\201908072350012_InitialCreate.cs" />
+    <Compile Include="Migrations\201908072350012_InitialCreate.Designer.cs">
+      <DependentUpon>201908072350012_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Presentation\CadastroAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\CadastroAlunos.Designer.cs">
+      <DependentUpon>CadastroAlunos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,8 +80,11 @@
     <Compile Include="Repository\AlunoRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\Context.cs" />
-    <EmbeddedResource Include="Migrations\201908070307456_InitialCreate.resx">
-      <DependentUpon>201908070307456_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908072350012_InitialCreate.resx">
+      <DependentUpon>201908072350012_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\CadastroAlunos.resx">
+      <DependentUpon>CadastroAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

@@ -9,16 +9,23 @@ namespace Proeficiencia.CrossCutting.Models
     public class Aluno
     {
         [Key]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
+
         [Required]
         [MaxLength(80)]
         public string Nome { get; set; }
+
         [Required]
         [MaxLength(16)]
         public string RA { get; set; }
+
         [Required]
         public DateTime Nascimento { get; set; }
+
         [Required]
         public Cursos Curso { get; set; }
+
+        [Required]
+        public bool Matriculado { get; set; }
     }
 }
