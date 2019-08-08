@@ -1,5 +1,4 @@
-﻿using Proeficiencia.CrossCutting.Enum;
-using Proeficiencia.CrossCutting.Models;
+﻿using Proeficiencia.CrossCutting.Models;
 using Proeficiencia.Repository;
 using System;
 using System.Windows.Forms;
@@ -9,12 +8,14 @@ namespace Proeficiencia.Presentation
     public partial class CadastroAlunos : Form
     {
         private readonly AlunoRepository _alunoRepository;
+        private readonly Context _context;
 
         public CadastroAlunos()
         {
             InitializeComponent();
 
-            _alunoRepository = new AlunoRepository();
+            _context = new Context();
+            _alunoRepository = new AlunoRepository(_context);
         }
 
         private void CadastroAlunos_Load(object sender, EventArgs e)
@@ -33,9 +34,11 @@ namespace Proeficiencia.Presentation
                     Nome = txtNome.Text,
                     RA = txtRa.Text,
                     Nascimento = dtpDataNascimento.Value,
-                    Curso = (Cursos)cmbCursos.SelectedValue,
+                    Curso = 0,
                     Matriculado = ckbMatriculado.Checked
                 };
+
+                _alunoRepository.Add(aluno);
 
                 LimparTela();
 
@@ -76,7 +79,7 @@ namespace Proeficiencia.Presentation
                 txtNome.Text = string.Empty;
                 txtRa.Text = string.Empty;
                 dtpDataNascimento.Value = DateTime.Now.Date;
-                cmbCursos.SelectedIndex = 0;
+                //cmbCursos.SelectedIndex = 0;
                 ckbMatriculado.Checked = false;
 
                 txtNome.Focus();

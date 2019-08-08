@@ -1,20 +1,31 @@
 namespace Proeficiencia.Migrations
 {
+    using Proeficiencia.CrossCutting.Models;
+    using Proeficiencia.Repository;
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Repository.Context>
+    internal sealed class Configuration : DbMigrationsConfiguration<Context>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Repository.Context context)
+        protected override void Seed(Context context)
         {
-            //  This method will be called after migrating to the latest version.
+            context.Set<Login>().AddOrUpdate(new Login
+            {
+                Nome = "master",
+                Senha = "1234",
+                Tipo = 1
+            });
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            context.Set<Login>().AddOrUpdate(new Login
+            {
+                Nome = "usuario",
+                Senha = "1234",
+                Tipo = 0
+            });
         }
     }
 }

@@ -117,10 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Target" xml:space="preserve">
-    <value>H4sIAAAAAAAEAM1Y227jNhB9L9B/EPSctWKnLbaBvAuvbAdGY3sRefNOS2OHKEWqJBXE39aHflJ/oUPdJcu3eFsUeYmomTMXzuXIf//5l/v5LWLWK0hFBR/a/d6tbQEPREj5dmgnevPho/35048/uJMwerOeC7k7I4eaXA3tF63je8dRwQtERPUiGkihxEb3AhE5JBTO4Pb2V6ffdwAhbMSyLPcp4ZpGkD7goyd4ALFOCJuLEJjKz/GNn6JaCxKBikkAQ/urFLChAUUvKek9QSwU1ULubGvEKEF/fGAb2yKcC000env/TYGvpeBbP8YDwla7GFBuQ5iCPIr7SvzcgG4HJiCnUiyggkRpEV0I2L/LM+S01d+VZ7vMIOZwgrnWOxN1msehPWIJF7bVtnTvMWmk2jn20I7yEq2xJnrZBfVSiBurIXhT1geWkfm7sbyE6UTCkEOiJWGokKwZDX6D3Ur8DnzIE8bqvqK3+K5xgEdoJQapd0+wySOYhbblNPWctmKpVtPJwptxfTewrQUaJ2sGZSnUUuFjScEDcJBEQ/iVaA2SGwxIk7lnvWVrISIorGHtYeJsa07eHoFv9cvQ/ojdM6VvEBYHuQPfOMXWQx0tE+hw8LjRp9ERk/1f/g2TC6IC7GOuRWF6jPla0ehyKC+RqkQxPdxLT9TFQHOC0QcJw5Yo4L4IwYDwE1CuU3VKs3+SqNY9hVszNWVkWw2Sd7WTwc4D/U7dhDcagmQ7RK9XezNlc4jWIPOAHlYz23omLMH/+3vZbYiOxn4pOjguOnmelKJ3x0Uflw+l6E/HRR9G81L05/3ryy5qf/jhgtGE8hLGPMOb7rg0XBb5vam8J5reZHg+6OYsrSonL978vKu+SmeqNedke67Yh86BhejOSRzjxdYWZH5i+dl29D74ly+MKMNwAtWxN0pvS0s4GskWWm9NTkOYUqk0jgCyJqYlvDDqEMtSfyCthZV6dtv7oEp2IW3+zzQO0YNeJ1SVwCnGZAZZGh6U7hxwIdX0A8KI7NgynmBJxA9tqmPa2d6o62cn5yOYJVDXN88X2K/N84YXtfPz0fKRXgfKj87HaEzzOlLjxT6e67Qutl1Ezl4VtfhEuySPdXJbpLRednSrc928i07z3b22ykRssy1eaWhayt8pDVHPCPT8P5jHsPp1JTAnnG5A6WxJ2Eg2By2y/P8hro5SITuHvf7npJGalJ6khZfypxpP5K9EBi9E7jHFd9PATkRDBK9meSGGr69meWlKr2d3a3oK5jCz6yYH7UV2FQXI+hVztjYeZz5exw72Z4fr1L+o3TEouq0gzPc1h8A0ZQVayMz4RhQ5xpjqHhUi7SsATbAAyEhquiGBxtcBKJV+ceTUbIKULZzxZaLjRI+UQgrHGh9NrnPcfkqBmj67y9g8qe8RArpJTQ0v+ZeEsrD0e9pROwcgTJXkkwC9wi8uhNvuSqSF4GcC5ekbQwzczJEVRDFDMLXkPnmF9/iGJPYRtiTYFSvgMMjpi2im3R1TspUkUjlGpW9+JXLMz0Sf/gEkiPtoWBIAAA==</value>
-  </data>
-  <data name="DefaultSchema" xml:space="preserve">
-    <value>dbo</value>
-  </data>
+  <metadata name="btnLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnSair.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="txtLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="txtSenha.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

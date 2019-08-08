@@ -11,6 +11,7 @@ namespace Proeficiencia.Repository
         }
 
         public DbSet<Aluno> Aluno { get; set; }
+        public DbSet<Login> Login { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

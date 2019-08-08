@@ -10,15 +10,25 @@ namespace Proeficiencia.Repository
         protected readonly Context _context;
         protected readonly DbSet<TEntity> _dbSet;
 
-        public Repository()
+        public Repository(Context contexto = null)
         {
-            _context = new Context();
+            if(contexto == null)
+            {
+                _context = new Context();
+            }
+            else
+            {
+                _context = contexto;
+            }
+
             _dbSet = _context.Set<TEntity>();
         }
 
         public virtual void Add(TEntity obj)
         {
             _dbSet.Add(obj);
+
+            _context.SaveChanges();
         }
 
         public virtual TEntity GetById(Guid id)
@@ -33,12 +43,16 @@ namespace Proeficiencia.Repository
 
         public virtual void Update(TEntity obj)
         {
-          //  _dbSet.Update(obj);
+            //  _dbSet.Update(obj);
+
+            _context.SaveChanges();
         }
 
         public virtual void Remove(Guid id)
         {
             _dbSet.Remove(_dbSet.Find(id));
+
+            _context.SaveChanges();
         }
 
         public int SaveChanges()
