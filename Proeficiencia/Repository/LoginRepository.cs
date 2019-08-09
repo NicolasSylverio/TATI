@@ -13,7 +13,7 @@ namespace Proeficiencia.Repository
 
         public Login GetByLogin(string login)
         {
-            return _context
+            return Context
                 .Set<Login>()
                 .FirstOrDefaultAsync(x => x.Nome == login)
                 .Result;

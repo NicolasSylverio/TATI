@@ -58,6 +58,7 @@
     <Compile Include="Abstracao\IRepository.cs" />
     <Compile Include="CrossCutting\Enum\Cursos.cs" />
     <Compile Include="CrossCutting\Models\Aluno.cs" />
+    <Compile Include="CrossCutting\Models\ControleDocumento.cs" />
     <Compile Include="CrossCutting\Models\Login.cs" />
     <Compile Include="CrossCutting\Models\ResponseBag.cs" />
     <Compile Include="Domain\Logon.cs" />
