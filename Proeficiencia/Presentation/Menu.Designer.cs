@@ -34,13 +34,16 @@
             this.cadastraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.arquivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enviarArquivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroDeAlunoToolStripMenuItem});
+            this.cadastroDeAlunoToolStripMenuItem,
+            this.arquivosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(494, 24);
@@ -58,7 +61,7 @@
             // cadastraToolStripMenuItem
             // 
             this.cadastraToolStripMenuItem.Name = "cadastraToolStripMenuItem";
-            this.cadastraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastraToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.cadastraToolStripMenuItem.Text = "Cadastro";
             this.cadastraToolStripMenuItem.Click += new System.EventHandler(this.CadastraToolStripMenuItem_Click);
             // 
@@ -71,6 +74,21 @@
             // 
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // arquivosToolStripMenuItem
+            // 
+            this.arquivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enviarArquivosToolStripMenuItem});
+            this.arquivosToolStripMenuItem.Name = "arquivosToolStripMenuItem";
+            this.arquivosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.arquivosToolStripMenuItem.Text = "Arquivos";
+            // 
+            // enviarArquivosToolStripMenuItem
+            // 
+            this.enviarArquivosToolStripMenuItem.Name = "enviarArquivosToolStripMenuItem";
+            this.enviarArquivosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enviarArquivosToolStripMenuItem.Text = "Enviar Arquivos";
+            this.enviarArquivosToolStripMenuItem.Click += new System.EventHandler(this.EnviarArquivosToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -100,5 +118,7 @@
         private System.Windows.Forms.ToolStripMenuItem cadastraToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem arquivosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enviarArquivosToolStripMenuItem;
     }
 }

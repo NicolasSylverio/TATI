@@ -28,5 +28,19 @@ namespace Proeficiencia.Presentation
                 MessageBox.Show("Erro no Sistema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void EnviarArquivosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var form = new IncluirArquivo();
+
+                form.ShowDialog(this);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro no Sistema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

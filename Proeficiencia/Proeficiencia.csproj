@@ -69,6 +69,12 @@
     <Compile Include="Presentation\CadastroAlunos.Designer.cs">
       <DependentUpon>CadastroAlunos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\IncluirArquivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\IncluirArquivo.Designer.cs">
+      <DependentUpon>IncluirArquivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="Repository\Context.cs" />
     <EmbeddedResource Include="Presentation\CadastroAlunos.resx">
       <DependentUpon>CadastroAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\IncluirArquivo.resx">
+      <DependentUpon>IncluirArquivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

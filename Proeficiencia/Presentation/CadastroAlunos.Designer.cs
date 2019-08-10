@@ -32,16 +32,16 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblRa = new System.Windows.Forms.Label();
-            this.txtRa = new System.Windows.Forms.TextBox();
-            this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
-            this.lblDataNascimento = new System.Windows.Forms.Label();
-            this.cmbCursos = new System.Windows.Forms.ComboBox();
-            this.lblCurso = new System.Windows.Forms.Label();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.ckbMatriculado = new System.Windows.Forms.CheckBox();
+            this.lblCurso = new System.Windows.Forms.Label();
+            this.cmbCursos = new System.Windows.Forms.ComboBox();
+            this.lblDataNascimento = new System.Windows.Forms.Label();
+            this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
+            this.txtRa = new System.Windows.Forms.TextBox();
+            this.lblRa = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,39 +92,43 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
-            // lblNome
+            // ckbMatriculado
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(15, 25);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome";
+            this.ckbMatriculado.AutoSize = true;
+            this.ckbMatriculado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbMatriculado.Location = new System.Drawing.Point(15, 160);
+            this.ckbMatriculado.Name = "ckbMatriculado";
+            this.ckbMatriculado.Size = new System.Drawing.Size(92, 17);
+            this.ckbMatriculado.TabIndex = 8;
+            this.ckbMatriculado.Text = "Matriculado";
+            this.ckbMatriculado.UseVisualStyleBackColor = true;
             // 
-            // txtNome
+            // lblCurso
             // 
-            this.txtNome.Location = new System.Drawing.Point(15, 45);
-            this.txtNome.MaxLength = 80;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(150, 20);
-            this.txtNome.TabIndex = 1;
+            this.lblCurso.AutoSize = true;
+            this.lblCurso.Location = new System.Drawing.Point(200, 95);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(34, 13);
+            this.lblCurso.TabIndex = 7;
+            this.lblCurso.Text = "Curso";
             // 
-            // lblRa
+            // cmbCursos
             // 
-            this.lblRa.AutoSize = true;
-            this.lblRa.Location = new System.Drawing.Point(200, 25);
-            this.lblRa.Name = "lblRa";
-            this.lblRa.Size = new System.Drawing.Size(100, 13);
-            this.lblRa.TabIndex = 2;
-            this.lblRa.Text = "Registro Aluno (RA)";
+            this.cmbCursos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCursos.FormattingEnabled = true;
+            this.cmbCursos.Location = new System.Drawing.Point(200, 115);
+            this.cmbCursos.Name = "cmbCursos";
+            this.cmbCursos.Size = new System.Drawing.Size(150, 21);
+            this.cmbCursos.TabIndex = 6;
             // 
-            // txtRa
+            // lblDataNascimento
             // 
-            this.txtRa.Location = new System.Drawing.Point(200, 45);
-            this.txtRa.MaxLength = 16;
-            this.txtRa.Name = "txtRa";
-            this.txtRa.Size = new System.Drawing.Size(150, 20);
-            this.txtRa.TabIndex = 3;
+            this.lblDataNascimento.AutoSize = true;
+            this.lblDataNascimento.Location = new System.Drawing.Point(15, 95);
+            this.lblDataNascimento.Name = "lblDataNascimento";
+            this.lblDataNascimento.Size = new System.Drawing.Size(89, 13);
+            this.lblDataNascimento.TabIndex = 5;
+            this.lblDataNascimento.Text = "Data Nascimento";
             // 
             // dtpDataNascimento
             // 
@@ -136,31 +140,39 @@
             this.dtpDataNascimento.TabIndex = 4;
             this.dtpDataNascimento.Value = new System.DateTime(2019, 8, 7, 0, 0, 0, 0);
             // 
-            // lblDataNascimento
+            // txtRa
             // 
-            this.lblDataNascimento.AutoSize = true;
-            this.lblDataNascimento.Location = new System.Drawing.Point(15, 95);
-            this.lblDataNascimento.Name = "lblDataNascimento";
-            this.lblDataNascimento.Size = new System.Drawing.Size(89, 13);
-            this.lblDataNascimento.TabIndex = 5;
-            this.lblDataNascimento.Text = "Data Nascimento";
+            this.txtRa.Location = new System.Drawing.Point(200, 45);
+            this.txtRa.MaxLength = 16;
+            this.txtRa.Name = "txtRa";
+            this.txtRa.Size = new System.Drawing.Size(150, 20);
+            this.txtRa.TabIndex = 3;
             // 
-            // cmbCursos
+            // lblRa
             // 
-            this.cmbCursos.FormattingEnabled = true;
-            this.cmbCursos.Location = new System.Drawing.Point(200, 115);
-            this.cmbCursos.Name = "cmbCursos";
-            this.cmbCursos.Size = new System.Drawing.Size(150, 21);
-            this.cmbCursos.TabIndex = 6;
+            this.lblRa.AutoSize = true;
+            this.lblRa.Location = new System.Drawing.Point(200, 25);
+            this.lblRa.Name = "lblRa";
+            this.lblRa.Size = new System.Drawing.Size(100, 13);
+            this.lblRa.TabIndex = 2;
+            this.lblRa.Text = "Registro Aluno (RA)";
             // 
-            // lblCurso
+            // txtNome
             // 
-            this.lblCurso.AutoSize = true;
-            this.lblCurso.Location = new System.Drawing.Point(200, 95);
-            this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(35, 13);
-            this.lblCurso.TabIndex = 7;
-            this.lblCurso.Text = "label1";
+            this.txtNome.Location = new System.Drawing.Point(15, 45);
+            this.txtNome.MaxLength = 80;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(150, 20);
+            this.txtNome.TabIndex = 1;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(15, 25);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(35, 13);
+            this.lblNome.TabIndex = 0;
+            this.lblNome.Text = "Nome";
             // 
             // btnLimpar
             // 
@@ -171,17 +183,6 @@
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
-            // 
-            // ckbMatriculado
-            // 
-            this.ckbMatriculado.AutoSize = true;
-            this.ckbMatriculado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbMatriculado.Location = new System.Drawing.Point(15, 160);
-            this.ckbMatriculado.Name = "ckbMatriculado";
-            this.ckbMatriculado.Size = new System.Drawing.Size(92, 17);
-            this.ckbMatriculado.TabIndex = 8;
-            this.ckbMatriculado.Text = "Matriculado";
-            this.ckbMatriculado.UseVisualStyleBackColor = true;
             // 
             // CadastroAlunos
             // 

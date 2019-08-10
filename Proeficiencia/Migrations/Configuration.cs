@@ -26,6 +26,8 @@ namespace Proeficiencia.Migrations
                 Senha = "1234",
                 Tipo = 0
             });
+
+            context.SaveChanges();
         }
     }
 }
