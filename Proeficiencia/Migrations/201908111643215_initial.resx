@@ -117,49 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="btnCadastrar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnSair.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblTitulo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="groupBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ckbMatriculado.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblCurso.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cmbCursos.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataNascimento.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtpDataNascimento.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="txtRa.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblRa.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="txtNome.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblNome.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnExcluir.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="Target" xml:space="preserve">
+    <value>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</value>
+  </data>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
+  </data>
 </root>

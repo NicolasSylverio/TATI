@@ -25,17 +25,17 @@ namespace Proeficiencia.Presentation
                 if (resultado)
                 {
                     var form = new Menu();
-
-                    form.Show();
-                    Close(); 
+                    Visible = false;
+                    form.ShowDialog(this);
                 }
-
-                MessageBox.Show("Usuario ou Senha Inválidos.", "Aviso Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    MessageBox.Show("Usuario ou Senha Inválidos.", "Aviso Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro Fatal: {ex}", "Aviso Sistema");
-                Application.Exit();
             }
         }
     }

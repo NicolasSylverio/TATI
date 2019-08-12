@@ -1,6 +1,6 @@
 ﻿namespace Proeficiencia.Presentation
 {
-    partial class CadastroAlunos
+    partial class ManutencaoAluno
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ckbMatriculado = new System.Windows.Forms.CheckBox();
             this.lblCurso = new System.Windows.Forms.Label();
@@ -41,39 +39,24 @@
             this.lblRa = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.btnExcluir = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.MaskedTextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnCadastrar
+            // btnExcluir
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(20, 350);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(85, 23);
-            this.btnCadastrar.TabIndex = 0;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
-            // 
-            // btnSair
-            // 
-            this.btnSair.Location = new System.Drawing.Point(335, 350);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(85, 23);
-            this.btnSair.TabIndex = 1;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(35, 35);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(142, 20);
-            this.lblTitulo.TabIndex = 2;
-            this.lblTitulo.Text = "Cadastro Alunos";
+            this.btnExcluir.Location = new System.Drawing.Point(127, 310);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(85, 23);
+            this.btnExcluir.TabIndex = 9;
+            this.btnExcluir.Text = "&Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // groupBox1
             // 
@@ -86,27 +69,27 @@
             this.groupBox1.Controls.Add(this.lblRa);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.lblNome);
-            this.groupBox1.Location = new System.Drawing.Point(20, 75);
+            this.groupBox1.Location = new System.Drawing.Point(22, 130);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(400, 250);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.Size = new System.Drawing.Size(400, 160);
+            this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
             // ckbMatriculado
             // 
             this.ckbMatriculado.AutoSize = true;
             this.ckbMatriculado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbMatriculado.Location = new System.Drawing.Point(15, 160);
+            this.ckbMatriculado.Location = new System.Drawing.Point(15, 125);
             this.ckbMatriculado.Name = "ckbMatriculado";
             this.ckbMatriculado.Size = new System.Drawing.Size(92, 17);
-            this.ckbMatriculado.TabIndex = 8;
+            this.ckbMatriculado.TabIndex = 7;
             this.ckbMatriculado.Text = "Matriculado";
             this.ckbMatriculado.UseVisualStyleBackColor = true;
             // 
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
-            this.lblCurso.Location = new System.Drawing.Point(200, 95);
+            this.lblCurso.Location = new System.Drawing.Point(200, 65);
             this.lblCurso.Name = "lblCurso";
             this.lblCurso.Size = new System.Drawing.Size(34, 13);
             this.lblCurso.TabIndex = 7;
@@ -116,7 +99,7 @@
             // 
             this.cmbCursos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCursos.FormattingEnabled = true;
-            this.cmbCursos.Location = new System.Drawing.Point(200, 115);
+            this.cmbCursos.Location = new System.Drawing.Point(200, 85);
             this.cmbCursos.Name = "cmbCursos";
             this.cmbCursos.Size = new System.Drawing.Size(150, 21);
             this.cmbCursos.TabIndex = 6;
@@ -124,7 +107,7 @@
             // lblDataNascimento
             // 
             this.lblDataNascimento.AutoSize = true;
-            this.lblDataNascimento.Location = new System.Drawing.Point(15, 95);
+            this.lblDataNascimento.Location = new System.Drawing.Point(15, 65);
             this.lblDataNascimento.Name = "lblDataNascimento";
             this.lblDataNascimento.Size = new System.Drawing.Size(89, 13);
             this.lblDataNascimento.TabIndex = 5;
@@ -133,25 +116,25 @@
             // dtpDataNascimento
             // 
             this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataNascimento.Location = new System.Drawing.Point(15, 115);
+            this.dtpDataNascimento.Location = new System.Drawing.Point(15, 85);
             this.dtpDataNascimento.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(150, 20);
-            this.dtpDataNascimento.TabIndex = 4;
+            this.dtpDataNascimento.TabIndex = 5;
             this.dtpDataNascimento.Value = new System.DateTime(2019, 8, 7, 0, 0, 0, 0);
             // 
             // txtRa
             // 
-            this.txtRa.Location = new System.Drawing.Point(200, 45);
+            this.txtRa.Location = new System.Drawing.Point(200, 35);
             this.txtRa.MaxLength = 16;
             this.txtRa.Name = "txtRa";
             this.txtRa.Size = new System.Drawing.Size(150, 20);
-            this.txtRa.TabIndex = 3;
+            this.txtRa.TabIndex = 4;
             // 
             // lblRa
             // 
             this.lblRa.AutoSize = true;
-            this.lblRa.Location = new System.Drawing.Point(200, 25);
+            this.lblRa.Location = new System.Drawing.Point(200, 15);
             this.lblRa.Name = "lblRa";
             this.lblRa.Size = new System.Drawing.Size(100, 13);
             this.lblRa.TabIndex = 2;
@@ -159,48 +142,96 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(15, 45);
+            this.txtNome.Location = new System.Drawing.Point(15, 35);
             this.txtNome.MaxLength = 80;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(150, 20);
-            this.txtNome.TabIndex = 1;
+            this.txtNome.TabIndex = 3;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(15, 25);
+            this.lblNome.Location = new System.Drawing.Point(15, 15);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
             // 
-            // btnExcluir
+            // lblTitulo
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(125, 350);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(85, 23);
-            this.btnExcluir.TabIndex = 4;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.BtnLimpar_Click);
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(37, 26);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(168, 20);
+            this.lblTitulo.TabIndex = 7;
+            this.lblTitulo.Text = "Manutenção Alunos";
             // 
-            // CadastroAlunos
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(337, 310);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(85, 23);
+            this.btnSair.TabIndex = 10;
+            this.btnSair.Text = "&Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Location = new System.Drawing.Point(22, 310);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(85, 23);
+            this.btnCadastrar.TabIndex = 8;
+            this.btnCadastrar.Text = "&Alterar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(16, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Id";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(45, 80);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(150, 20);
+            this.txtId.TabIndex = 1;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(225, 78);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(100, 23);
+            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.Text = "&Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
+            // 
+            // ManutencaoAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 391);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(444, 361);
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrar);
-            this.Name = "CadastroAlunos";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "ManutencaoAluno";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro Alunos";
-            this.Load += new System.EventHandler(this.CadastroAlunos_Load);
+            this.Text = "Manutenção Aluno";
+            this.Load += new System.EventHandler(this.ManutencaoAluno_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -210,19 +241,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblRa;
-        private System.Windows.Forms.TextBox txtRa;
-        private System.Windows.Forms.DateTimePicker dtpDataNascimento;
-        private System.Windows.Forms.Label lblDataNascimento;
-        private System.Windows.Forms.ComboBox cmbCursos;
-        private System.Windows.Forms.Label lblCurso;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox ckbMatriculado;
+        private System.Windows.Forms.Label lblCurso;
+        private System.Windows.Forms.ComboBox cmbCursos;
+        private System.Windows.Forms.Label lblDataNascimento;
+        private System.Windows.Forms.DateTimePicker dtpDataNascimento;
+        private System.Windows.Forms.TextBox txtRa;
+        private System.Windows.Forms.Label lblRa;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txtId;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }

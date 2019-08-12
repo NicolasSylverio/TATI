@@ -41,8 +41,8 @@
             this.btnLogin.Location = new System.Drawing.Point(40, 180);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(80, 23);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "&Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
@@ -51,8 +51,8 @@
             this.btnSair.Location = new System.Drawing.Point(150, 180);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(80, 23);
-            this.btnSair.TabIndex = 1;
-            this.btnSair.Text = "Sair";
+            this.btnSair.TabIndex = 4;
+            this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
@@ -62,7 +62,7 @@
             this.txtLogin.MaxLength = 16;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(190, 20);
-            this.txtLogin.TabIndex = 2;
+            this.txtLogin.TabIndex = 1;
             // 
             // label1
             // 
@@ -89,7 +89,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(190, 20);
-            this.txtSenha.TabIndex = 5;
+            this.txtSenha.TabIndex = 2;
             // 
             // Login
             // 
@@ -105,6 +105,8 @@
             this.Controls.Add(this.btnLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Login";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);

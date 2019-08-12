@@ -1,10 +1,20 @@
-﻿using System;
+﻿using Proeficiencia.Domain;
+using System;
 using System.Windows.Forms;
 
 namespace Proeficiencia.Presentation
 {
     public partial class Menu : Form
     {
+        private readonly Login _login;
+
+        public Menu(Login login)
+        {
+            InitializeComponent();
+
+            _login = login;
+        }
+
         public Menu()
         {
             InitializeComponent();
@@ -19,9 +29,16 @@ namespace Proeficiencia.Presentation
         {
             try
             {
-                var form = new CadastroAlunos();
+                if (Logon.Tipo != 1)
+                {
+                    MessageBox.Show("Usuário sem permissão para acessar a rotina.", "Aviso Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                form.ShowDialog(this);
+                using (var form = new CadastroAlunos())
+                {
+                    form.ShowDialog(this);
+                }
             }
             catch (Exception)
             {
@@ -33,9 +50,67 @@ namespace Proeficiencia.Presentation
         {
             try
             {
-                var form = new IncluirArquivo();
+                using (var form = new IncluirArquivo())
+                {
+                    form.ShowDialog(this);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro no Sistema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-                form.ShowDialog(this);
+        private void ValidarArquivosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Logon.Tipo != 1)
+                {
+                    MessageBox.Show("Usuário sem permissão para acessar a rotina.", "Aviso Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                using (var form = new ValidarArquivos())
+                {
+                    form.ShowDialog(this);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro no Sistema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ConsultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var form = new ConsultaArquivos())
+                {
+                    form.ShowDialog(this);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro no Sistema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ManutençãoAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Logon.Tipo != 1)
+                {
+                    MessageBox.Show("Usuário sem permissão para acessar a rotina.", "Aviso Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                using (var form = new ManutencaoAluno())
+                {
+                    form.ShowDialog(this);
+                }
             }
             catch (Exception)
             {

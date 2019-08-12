@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnProcurar = new System.Windows.Forms.Button();
+            this.txtArquivo = new System.Windows.Forms.TextBox();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnProcurar
             // 
-            this.button1.Location = new System.Drawing.Point(30, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Procurar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnProcurar.Location = new System.Drawing.Point(30, 30);
+            this.btnProcurar.Name = "btnProcurar";
+            this.btnProcurar.Size = new System.Drawing.Size(100, 23);
+            this.btnProcurar.TabIndex = 1;
+            this.btnProcurar.Text = "&Procurar";
+            this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.Click += new System.EventHandler(this.BtnProcurar_Click);
             // 
-            // textBox1
+            // txtArquivo
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtArquivo.Enabled = false;
+            this.txtArquivo.Location = new System.Drawing.Point(140, 31);
+            this.txtArquivo.Name = "txtArquivo";
+            this.txtArquivo.ReadOnly = true;
+            this.txtArquivo.Size = new System.Drawing.Size(300, 20);
+            this.txtArquivo.TabIndex = 1;
             // 
             // btnEnviar
             // 
@@ -57,8 +59,9 @@
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(100, 23);
             this.btnEnviar.TabIndex = 2;
-            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.Text = "&Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.BtnEnviar_Click);
             // 
             // btnSair
             // 
@@ -66,7 +69,7 @@
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(100, 23);
             this.btnSair.TabIndex = 3;
-            this.btnSair.Text = "Sair";
+            this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
@@ -75,13 +78,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 161);
+            this.ControlBox = false;
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEnviar);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtArquivo);
+            this.Controls.Add(this.btnProcurar);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "IncluirArquivo";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Incluir Arquivo";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -90,8 +97,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnProcurar;
+        private System.Windows.Forms.TextBox txtArquivo;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Button btnSair;
     }

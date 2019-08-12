@@ -13,19 +13,9 @@ namespace Proeficiencia.Migrations
 
         protected override void Seed(Context context)
         {
-            context.Set<Login>().AddOrUpdate(new Login
-            {
-                Nome = "master",
-                Senha = "1234",
-                Tipo = 1
-            });
+            context.Login.Add(new Login { Nome = "master", Senha = "1234", Tipo = 1 });
 
-            context.Set<Login>().AddOrUpdate(new Login
-            {
-                Nome = "usuario",
-                Senha = "1234",
-                Tipo = 0
-            });
+            context.Login.Add(new Login { Nome = "usuario", Senha = "1234", Tipo = 0 });
 
             context.SaveChanges();
         }

@@ -40,6 +40,21 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -56,18 +71,35 @@
   <ItemGroup>
     <Compile Include="Abstracao\IAlunoRepository.cs" />
     <Compile Include="Abstracao\IRepository.cs" />
+    <Compile Include="CrossCutting\Constants\Constants.cs" />
     <Compile Include="CrossCutting\Enum\Cursos.cs" />
     <Compile Include="CrossCutting\Models\Aluno.cs" />
     <Compile Include="CrossCutting\Models\ControleDocumento.cs" />
     <Compile Include="CrossCutting\Models\Login.cs" />
     <Compile Include="CrossCutting\Models\ResponseBag.cs" />
     <Compile Include="Domain\Logon.cs" />
+    <Compile Include="Migrations\201908111643215_initial.cs" />
+    <Compile Include="Migrations\201908111643215_initial.Designer.cs">
+      <DependentUpon>201908111643215_initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\CadastroAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation\CadastroAlunos.Designer.cs">
       <DependentUpon>CadastroAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ConsultaAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ConsultaAluno.Designer.cs">
+      <DependentUpon>ConsultaAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ConsultaArquivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ConsultaArquivos.Designer.cs">
+      <DependentUpon>ConsultaArquivos.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\IncluirArquivo.cs">
       <SubType>Form</SubType>
@@ -81,20 +113,42 @@
     <Compile Include="Presentation\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\ManutencaoAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ManutencaoAluno.Designer.cs">
+      <DependentUpon>ManutencaoAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\ValidarArquivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ValidarArquivos.Designer.cs">
+      <DependentUpon>ValidarArquivos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AlunoRepository.cs" />
+    <Compile Include="Repository\ControleDocumentoRepository.cs" />
     <Compile Include="Repository\LoginRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\Context.cs" />
+    <EmbeddedResource Include="Migrations\201908111643215_initial.resx">
+      <DependentUpon>201908111643215_initial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\CadastroAlunos.resx">
       <DependentUpon>CadastroAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ConsultaAluno.resx">
+      <DependentUpon>ConsultaAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ConsultaArquivos.resx">
+      <DependentUpon>ConsultaArquivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\IncluirArquivo.resx">
       <DependentUpon>IncluirArquivo.cs</DependentUpon>
@@ -102,8 +156,14 @@
     <EmbeddedResource Include="Presentation\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ManutencaoAluno.resx">
+      <DependentUpon>ManutencaoAluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ValidarArquivos.resx">
+      <DependentUpon>ValidarArquivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,6 +191,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Arquivos\ArquivosAutorizados\" />
+    <Folder Include="Arquivos\ArquivosBloqueados\" />
+    <Folder Include="Arquivos\ArquivosEnviados\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

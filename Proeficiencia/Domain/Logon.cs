@@ -10,22 +10,23 @@ namespace Proeficiencia.Domain
 
         public static bool ValidarUsuario(string usuario, string senha)
         {
-            var login = new LoginRepository(new Context());
-
-            var usuarioValido = login.GetByLogin(usuario);
-
-            login.Dispose();
-
-            if (usuarioValido.Nome == usuario && usuarioValido.Senha == senha)
+            using (var login = new LoginRepository(new Context()))
             {
-                Id = 0;
-                Usuario = usuario;
-                Tipo = 1;
+                var usuarioValido = login.GetByLogin(usuario);
 
-                return true;
+                if (usuarioValido == null) return false;
+
+                if (usuarioValido.Nome == usuario && usuarioValido.Senha == senha)
+                {
+                    Id = usuarioValido.Id;
+                    Usuario = usuarioValido.Nome;
+                    Tipo = usuarioValido.Tipo;
+
+                    return true;
+                }
+
+                return false;
             }
-
-            return false;
         }
 
         public static bool UsuarioLogado()

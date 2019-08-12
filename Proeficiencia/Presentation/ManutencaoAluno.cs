@@ -1,17 +1,15 @@
-﻿using Proeficiencia.CrossCutting.Enum;
-using Proeficiencia.CrossCutting.Models;
-using Proeficiencia.Repository;
+﻿using Proeficiencia.Repository;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Proeficiencia.Presentation
 {
-    public partial class CadastroAlunos : Form
+    public partial class ManutencaoAluno : Form
     {
         private readonly AlunoRepository _alunoRepository;
 
-        public CadastroAlunos()
+        public ManutencaoAluno()
         {
             InitializeComponent();
 
@@ -20,7 +18,7 @@ namespace Proeficiencia.Presentation
             if (_alunoRepository == null) throw new ArgumentNullException($"Falha ao carregar componentes da tela. parametro: {nameof(_alunoRepository)}");
         }
 
-        private void CadastroAlunos_Load(object sender, EventArgs e)
+        private void ManutencaoAluno_Load(object sender, EventArgs e)
         {
             dtpDataNascimento.Value = DateTime.Now.Date;
 
@@ -38,53 +36,27 @@ namespace Proeficiencia.Presentation
             cmbCursos.ValueMember = "Id";
         }
 
-        private void BtnCadastrar_Click(object sender, EventArgs e)
+        private void BtnPesquisar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (!ValidarCampos()) throw new Exception("Campos Obrigatórios não preenchidos ou selecionados.");
+                var aluno = _alunoRepository.GetById(Convert.ToInt32(txtId.Text));
 
-                var aluno = new Aluno
-                {
-                    Nome = txtNome.Text,
-                    RA = txtRa.Text,
-                    Nascimento = dtpDataNascimento.Value,
-                    Curso = (Cursos)cmbCursos.SelectedIndex,
-                    Matriculado = ckbMatriculado.Checked
-                };
-
-                _alunoRepository.Add(aluno);
-
-                LimparTela();
-
-                MessageBox.Show
-                (
-                    "Aluno Cadastrado Com Sucesso",
-                    "Aviso Sistema",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                );
+                txtNome.Text = aluno.Nome;
+                txtRa.Text = aluno.RA;
+                dtpDataNascimento.Value = aluno.Nascimento;
+                cmbCursos.SelectedIndex = (int)aluno.Curso;
             }
             catch (Exception ex)
             {
                 MessageBox.Show
                 (
-                    $"Erro ao Cadastrar Aluno: {ex.Message}",
+                    $"Erro ao Pesquisar Aluno: {ex.Message}",
                     "Aviso Sistema",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
             }
-        }
-
-        private void BtnSair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void BtnLimpar_Click(object sender, EventArgs e)
-        {
-            LimparTela();
         }
 
         private void LimparTela()
@@ -111,13 +83,22 @@ namespace Proeficiencia.Presentation
             }
         }
 
-        private bool ValidarCampos()
+        private void BtnExcluir_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNome.Text)) return false;
-
-            if (string.IsNullOrWhiteSpace(txtRa.Text)) return false;
-
-            return true;
+            try
+            {
+                _alunoRepository.Remove(Convert.ToInt32(txtId.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show
+                    (
+                        $"Erro ao Excluir Aluno: {ex.Message}",
+                        "Aviso Sistema",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+            }
         }
     }
 }

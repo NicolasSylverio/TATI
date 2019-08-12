@@ -11,11 +11,10 @@ namespace Proeficiencia.CrossCutting.Models
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(20)]
+        [MaxLength(100)]
         public string NomeDocumento { get; set; }
 
         [Required]
-        [MaxLength(200)]
         public string CaminhoArquivo { get; set; }
 
         public DateTime DataEnvio { get; set; }
@@ -26,7 +25,7 @@ namespace Proeficiencia.CrossCutting.Models
 
         public int IdUsuarioValidador { get; set; }
 
-        [MaxLength(200)]
+        [MaxLength(512)]
         public string MensagemControle { get; set; }
         
         public bool Erro { get; set; }

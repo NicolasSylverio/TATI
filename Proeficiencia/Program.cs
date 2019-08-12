@@ -13,7 +13,7 @@ namespace Proeficiencia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Presentation.Menu());            
+            Application.Run(new Presentation.Login());
         }
     }
 }

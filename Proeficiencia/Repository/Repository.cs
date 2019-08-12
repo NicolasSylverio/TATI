@@ -1,7 +1,7 @@
 ﻿using Proeficiencia.Abstracao;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
 
 namespace Proeficiencia.Repository
 {
@@ -31,24 +31,22 @@ namespace Proeficiencia.Repository
             Context.SaveChanges();
         }
 
-        public virtual TEntity GetById(Guid id)
+        public virtual TEntity GetById(int id)
         {
             return _dbSet.Find(id);
         }
 
-        public virtual IQueryable<TEntity> GetAll()
+        public virtual IEnumerable<TEntity> GetAll()
         {
-            return _dbSet;
+            return _dbSet.ToListAsync().Result;
         }
 
-        public virtual void Update(TEntity obj)
+        public virtual TEntity Update(int obj)
         {
-            //  _dbSet.Update(obj);
-
-            Context.SaveChanges();
+            return _dbSet.Find(obj);
         }
 
-        public virtual void Remove(Guid id)
+        public virtual void Remove(int id)
         {
             _dbSet.Remove(_dbSet.Find(id) ?? throw new InvalidOperationException());
 
