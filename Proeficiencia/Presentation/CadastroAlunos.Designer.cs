@@ -41,7 +41,7 @@
             this.lblRa = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,15 +174,15 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
             // 
-            // btnExcluir
+            // btnLimpar
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(125, 350);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(85, 23);
-            this.btnExcluir.TabIndex = 4;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.BtnLimpar_Click);
+            this.btnLimpar.Location = new System.Drawing.Point(125, 350);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(85, 23);
+            this.btnLimpar.TabIndex = 4;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // CadastroAlunos
             // 
@@ -190,7 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 391);
             this.ControlBox = false;
-            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnSair);
@@ -222,7 +222,7 @@
         private System.Windows.Forms.Label lblDataNascimento;
         private System.Windows.Forms.ComboBox cmbCursos;
         private System.Windows.Forms.Label lblCurso;
-        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.CheckBox ckbMatriculado;
     }
 }

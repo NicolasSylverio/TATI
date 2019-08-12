@@ -175,6 +175,7 @@
             this.btnSair.TabIndex = 10;
             this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // btnCadastrar
             // 

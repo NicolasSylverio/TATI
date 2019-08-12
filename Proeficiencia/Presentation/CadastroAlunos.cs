@@ -35,7 +35,7 @@ namespace Proeficiencia.Presentation
             };
 
             cmbCursos.DataSource = comboList;
-            cmbCursos.ValueMember = "Id";
+            cmbCursos.ValueMember = "Descricao";
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)

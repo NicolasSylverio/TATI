@@ -33,7 +33,7 @@ namespace Proeficiencia.Presentation
             };
 
             cmbCursos.DataSource = comboList;
-            cmbCursos.ValueMember = "Id";
+            cmbCursos.ValueMember = "Descricao";
         }
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
@@ -99,6 +99,11 @@ namespace Proeficiencia.Presentation
                         MessageBoxIcon.Error
                     );
             }
+        }
+
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
