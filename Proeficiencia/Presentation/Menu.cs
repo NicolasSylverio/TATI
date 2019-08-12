@@ -117,5 +117,26 @@ namespace Proeficiencia.Presentation
                 MessageBox.Show("Erro no Sistema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ConsultaAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Logon.Tipo != 1)
+                {
+                    MessageBox.Show("Usuário sem permissão para acessar a rotina.", "Aviso Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                //using (var form = new ManutencaoAluno())
+                //{
+                //    form.ShowDialog(this);
+                //}
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro no Sistema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
