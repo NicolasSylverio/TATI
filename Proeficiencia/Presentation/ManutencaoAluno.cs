@@ -1,4 +1,5 @@
-﻿using Proeficiencia.Repository;
+﻿using Proeficiencia.CrossCutting.Enum;
+using Proeficiencia.Repository;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -42,10 +43,13 @@ namespace Proeficiencia.Presentation
             {
                 var aluno = _alunoRepository.GetById(Convert.ToInt32(txtId.Text));
 
+                if (aluno == null) throw new Exception("Aluno não encontrado.");
+
                 txtNome.Text = aluno.Nome;
                 txtRa.Text = aluno.RA;
                 dtpDataNascimento.Value = aluno.Nascimento;
                 cmbCursos.SelectedIndex = (int)aluno.Curso;
+                ckbMatriculado.Checked = aluno.Matriculado;
             }
             catch (Exception ex)
             {
@@ -87,7 +91,11 @@ namespace Proeficiencia.Presentation
         {
             try
             {
+                if (_alunoRepository.GetById(Convert.ToInt32(txtId.Text)) == null) throw new Exception("Aluno não encontrado");
+
                 _alunoRepository.Remove(Convert.ToInt32(txtId.Text));
+
+                LimparTela();
             }
             catch (Exception ex)
             {
@@ -103,7 +111,32 @@ namespace Proeficiencia.Presentation
 
         private void BtnSair_Click(object sender, EventArgs e)
         {
+            _alunoRepository.Dispose();
+
             Close();
+        }
+
+        private void BtnCadastrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var aluno = _alunoRepository.GetById(Convert.ToInt32(txtId.Text));
+
+                aluno.Nome = txtNome.Text;
+                aluno.RA = txtRa.Text;
+                aluno.Nascimento = dtpDataNascimento.Value;
+                aluno.Curso = (Cursos)cmbCursos.SelectedIndex;
+                aluno.Matriculado = ckbMatriculado.Checked;
+
+                _alunoRepository.SaveChanges();
+
+                LimparTela();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

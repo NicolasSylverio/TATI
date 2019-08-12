@@ -185,6 +185,7 @@
             this.btnCadastrar.TabIndex = 8;
             this.btnCadastrar.Text = "&Alterar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // label1
             // 

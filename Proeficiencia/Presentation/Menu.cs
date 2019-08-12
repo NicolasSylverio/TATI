@@ -6,15 +6,6 @@ namespace Proeficiencia.Presentation
 {
     public partial class Menu : Form
     {
-        private readonly Login _login;
-
-        public Menu(Login login)
-        {
-            InitializeComponent();
-
-            _login = login;
-        }
-
         public Menu()
         {
             InitializeComponent();

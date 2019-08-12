@@ -33,13 +33,13 @@
             this.cadastroDeAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manutençãoAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arquivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enviarArquivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarArquivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.consultaAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,13 @@
             this.manutençãoAlunosToolStripMenuItem.Text = "Manutenção Alunos";
             this.manutençãoAlunosToolStripMenuItem.Click += new System.EventHandler(this.ManutençãoAlunosToolStripMenuItem_Click);
             // 
+            // consultaAlunosToolStripMenuItem
+            // 
+            this.consultaAlunosToolStripMenuItem.Name = "consultaAlunosToolStripMenuItem";
+            this.consultaAlunosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.consultaAlunosToolStripMenuItem.Text = "Consulta Alunos";
+            this.consultaAlunosToolStripMenuItem.Click += new System.EventHandler(this.ConsultaAlunosToolStripMenuItem_Click);
+            // 
             // arquivosToolStripMenuItem
             // 
             this.arquivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -91,22 +98,22 @@
             // enviarArquivosToolStripMenuItem
             // 
             this.enviarArquivosToolStripMenuItem.Name = "enviarArquivosToolStripMenuItem";
-            this.enviarArquivosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.enviarArquivosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.enviarArquivosToolStripMenuItem.Text = "Enviar Arquivos";
             this.enviarArquivosToolStripMenuItem.Click += new System.EventHandler(this.EnviarArquivosToolStripMenuItem_Click);
             // 
             // validarArquivosToolStripMenuItem
             // 
             this.validarArquivosToolStripMenuItem.Name = "validarArquivosToolStripMenuItem";
-            this.validarArquivosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.validarArquivosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.validarArquivosToolStripMenuItem.Text = "Validar Arquivos";
             this.validarArquivosToolStripMenuItem.Click += new System.EventHandler(this.ValidarArquivosToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.consultarToolStripMenuItem.Text = "Consultar";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarToolStripMenuItem.Text = "Consulta Arquivos";
             this.consultarToolStripMenuItem.Click += new System.EventHandler(this.ConsultarToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
@@ -118,13 +125,6 @@
             // 
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // consultaAlunosToolStripMenuItem
-            // 
-            this.consultaAlunosToolStripMenuItem.Name = "consultaAlunosToolStripMenuItem";
-            this.consultaAlunosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.consultaAlunosToolStripMenuItem.Text = "Consulta Alunos";
-            this.consultaAlunosToolStripMenuItem.Click += new System.EventHandler(this.ConsultaAlunosToolStripMenuItem_Click);
             // 
             // Menu
             // 

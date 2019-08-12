@@ -117,7 +117,7 @@ namespace Proeficiencia.Presentation
                 textFormatter.Alignment = XParagraphAlignment.Center;
                 textFormatter.DrawString($"Arquivo Enviado Com Sucesso: {fileName} Login: {Logon.Usuario}, Data: {DateTime.Now.ToString("dd/MM/yyyy mm:ss")}", font, XBrushes.Black, new XRect(30, 60, page.Width - 60, page.Height - 60));
 
-                var path = $"{caminho}\\relatorio{DateTime.Now.ToString("yyyyMMddmmss")}.pdf";
+                var path = $"{caminho}relatorio{DateTime.Now.ToString("yyyyMMddmmss")}.pdf";
 
                 document.Save(path);
                 Process.Start(path);
