@@ -4,6 +4,7 @@ using Proeficiencia.Repository;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using Proeficiencia.CrossCutting.Enum;
 
 namespace Proeficiencia.Presentation
 {
@@ -24,18 +25,18 @@ namespace Proeficiencia.Presentation
         {
             dtpDataNascimento.Value = DateTime.Now.Date;
 
-            var comboList = new BindingList<object>
+            cmbCursos.DataSource  = new BindingList<object>
             {
-                new { Id = 0, Descricao = "Selecion o Curso" },
-                new { Id = 1, Descricao = "Gestão de TI" },
-                new { Id = 2, Descricao = "Análise e Desenv. de Sistemas" },
-                new { Id = 3, Descricao = "Eventos" },
-                new { Id = 4, Descricao = "Logistica" },
-                new { Id = 5, Descricao = "Gestão Ambiental" }
+                new {Id = 0, Descricao = "Selecione o tipo"},
+                new {Id = 1, Descricao = "Gestão de Ti"},
+                new {Id = 2, Descricao = "Analise Desenvolvimento Sistemas"},
+                new {Id = 3, Descricao = "Eventos"},
+                new {Id = 4, Descricao = "Logistica"},
+                new {Id = 5, Descricao = "Gestão Ambiental"}
             };
 
-            cmbCursos.DataSource = comboList;
-            cmbCursos.ValueMember = "Descricao";
+            cmbCursos.DisplayMember = "Descricao";
+            cmbCursos.ValueMember = "Id";
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace Proeficiencia.Presentation
                     Nome = txtNome.Text,
                     RA = txtRa.Text,
                     Nascimento = dtpDataNascimento.Value,
-                    Curso = (Cursos)cmbCursos.SelectedIndex,
+                    Curso = (Cursos)cmbCursos.SelectedValue,
                     Matriculado = ckbMatriculado.Checked
                 };
 
@@ -113,11 +114,8 @@ namespace Proeficiencia.Presentation
 
         private bool ValidarCampos()
         {
-            if (string.IsNullOrWhiteSpace(txtNome.Text)) return false;
-
-            if (string.IsNullOrWhiteSpace(txtRa.Text)) return false;
-
-            return true;
+            return !string.IsNullOrWhiteSpace(txtNome.Text) 
+                && !string.IsNullOrWhiteSpace(txtRa.Text);
         }
     }
 }
