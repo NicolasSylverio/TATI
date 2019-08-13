@@ -135,7 +135,6 @@ namespace Proeficiencia.Presentation
             catch (Exception)
             {
 
-                throw;
             }
         }
     }
