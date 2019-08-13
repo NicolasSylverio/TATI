@@ -69,14 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstracao\IAlunoRepository.cs" />
     <Compile Include="Abstracao\IRepository.cs" />
     <Compile Include="CrossCutting\Constants\Constants.cs" />
     <Compile Include="CrossCutting\Enum\Cursos.cs" />
     <Compile Include="CrossCutting\Models\Aluno.cs" />
     <Compile Include="CrossCutting\Models\ControleDocumento.cs" />
     <Compile Include="CrossCutting\Models\Login.cs" />
-    <Compile Include="CrossCutting\Models\ResponseBag.cs" />
     <Compile Include="Domain\Logon.cs" />
     <Compile Include="Migrations\201908111643215_initial.cs" />
     <Compile Include="Migrations\201908111643215_initial.Designer.cs">
