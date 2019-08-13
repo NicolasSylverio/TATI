@@ -119,10 +119,10 @@ namespace Proeficiencia.Presentation
                     return;
                 }
 
-                //using (var form = new ManutencaoAluno())
-                //{
-                //    form.ShowDialog(this);
-                //}
+                using (var form = new ConsultaAlunos())
+                {
+                    form.ShowDialog(this);
+                }
             }
             catch (Exception)
             {

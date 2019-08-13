@@ -1,0 +1,31 @@
+Kali Comandos
+
+Dig [hostname] 
+
+dnsenum [hostname]
+
+[Comando] --help
+
+whois [hostname]
+
+
+
+
+Sites descoberta de informação:
+
+Archive.org
+
+waybackmachine.com.br
+
+www.exploit-db.com/google-hacking-database
+
+filetype:txt "password"
+
+MD5
+a387465abef38eb646cb746804bd8334
+
+SHA256
+d3884190975aabb4c399cef7eda009fd49260ff0181bbee2b1b94398cfe6a859
+
+
+

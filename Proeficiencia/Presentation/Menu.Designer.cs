@@ -50,7 +50,7 @@
             this.arquivosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(494, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,21 +98,21 @@
             // enviarArquivosToolStripMenuItem
             // 
             this.enviarArquivosToolStripMenuItem.Name = "enviarArquivosToolStripMenuItem";
-            this.enviarArquivosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enviarArquivosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.enviarArquivosToolStripMenuItem.Text = "Enviar Arquivos";
             this.enviarArquivosToolStripMenuItem.Click += new System.EventHandler(this.EnviarArquivosToolStripMenuItem_Click);
             // 
             // validarArquivosToolStripMenuItem
             // 
             this.validarArquivosToolStripMenuItem.Name = "validarArquivosToolStripMenuItem";
-            this.validarArquivosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.validarArquivosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.validarArquivosToolStripMenuItem.Text = "Validar Arquivos";
             this.validarArquivosToolStripMenuItem.Click += new System.EventHandler(this.ValidarArquivosToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.consultarToolStripMenuItem.Text = "Consulta Arquivos";
             this.consultarToolStripMenuItem.Click += new System.EventHandler(this.ConsultarToolStripMenuItem_Click);
             // 
@@ -130,11 +130,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 450);
+            this.ClientSize = new System.Drawing.Size(784, 749);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Menu";
             this.ShowIcon = false;
