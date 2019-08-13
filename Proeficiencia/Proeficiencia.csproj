@@ -147,6 +147,9 @@
     <EmbeddedResource Include="Presentation\ConsultaAlunos.resx">
       <DependentUpon>ConsultaAlunos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ConsultaArquivos.resx">
+      <DependentUpon>ConsultaArquivos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

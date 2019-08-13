@@ -185,20 +185,17 @@ namespace Proeficiencia.Presentation
                 if (rdbValidar.Checked)
                 {
                     documentos = documentos
-                        .Where(x => !x.Erro && x.DataValidacao == null)
-                        .Take(20);
+                        .Where(x => !x.Erro && x.DataValidacao == null);
                 }
                 else if (rdbValidados.Checked)
                 {
                     documentos = documentos
-                        .Where(x => !x.Erro && x.DataValidacao != null)
-                        .Take(20);
+                        .Where(x => !x.Erro && x.DataValidacao != null);
                 }
                 else if (rdbBloqueados.Checked)
                 {
                     documentos = documentos
-                        .Where(x => x.Erro)
-                        .Take(20);
+                        .Where(x => x.Erro);
                 }
                 else
                 {

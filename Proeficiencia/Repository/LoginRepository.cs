@@ -1,9 +1,10 @@
-﻿using Proeficiencia.CrossCutting.Models;
+﻿using Proeficiencia.Abstracao;
+using Proeficiencia.CrossCutting.Models;
 using System.Data.Entity;
 
 namespace Proeficiencia.Repository
 {
-    public class LoginRepository : Repository<Login>
+    public class LoginRepository : Repository<Login>, ILoginRepository
     {
         public LoginRepository(Context context) 
             : base(context)

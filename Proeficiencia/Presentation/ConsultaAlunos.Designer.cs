@@ -60,7 +60,7 @@
             this.txtRa.Location = new System.Drawing.Point(330, 40);
             this.txtRa.Name = "txtRa";
             this.txtRa.Size = new System.Drawing.Size(147, 20);
-            this.txtRa.TabIndex = 6;
+            this.txtRa.TabIndex = 4;
             // 
             // rdbRa
             // 
@@ -68,7 +68,7 @@
             this.rdbRa.Location = new System.Drawing.Point(235, 40);
             this.rdbRa.Name = "rdbRa";
             this.rdbRa.Size = new System.Drawing.Size(94, 17);
-            this.rdbRa.TabIndex = 5;
+            this.rdbRa.TabIndex = 3;
             this.rdbRa.TabStop = true;
             this.rdbRa.Text = "Registro Aluno";
             this.rdbRa.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             this.rdbNome.Location = new System.Drawing.Point(10, 40);
             this.rdbNome.Name = "rdbNome";
             this.rdbNome.Size = new System.Drawing.Size(53, 17);
-            this.rdbNome.TabIndex = 4;
+            this.rdbNome.TabIndex = 1;
             this.rdbNome.TabStop = true;
             this.rdbNome.Text = "Nome";
             this.rdbNome.UseVisualStyleBackColor = true;
@@ -89,14 +89,14 @@
             this.txtNome.Location = new System.Drawing.Point(70, 40);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(150, 20);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 2;
             // 
             // btnPesquisar
             // 
             this.btnPesquisar.Location = new System.Drawing.Point(510, 37);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(130, 25);
-            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.TabIndex = 5;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
@@ -112,14 +112,14 @@
             this.dgvAluno.ReadOnly = true;
             this.dgvAluno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAluno.Size = new System.Drawing.Size(670, 290);
-            this.dgvAluno.TabIndex = 1;
+            this.dgvAluno.TabIndex = 6;
             // 
             // btnImprimir
             // 
             this.btnImprimir.Location = new System.Drawing.Point(30, 450);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(120, 23);
-            this.btnImprimir.TabIndex = 2;
+            this.btnImprimir.TabIndex = 7;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
@@ -129,7 +129,7 @@
             this.btnSair.Location = new System.Drawing.Point(580, 450);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(120, 23);
-            this.btnSair.TabIndex = 4;
+            this.btnSair.TabIndex = 8;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);

@@ -50,7 +50,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(20, 350);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(85, 23);
-            this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.TabIndex = 6;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
@@ -60,7 +60,7 @@
             this.btnSair.Location = new System.Drawing.Point(335, 350);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(85, 23);
-            this.btnSair.TabIndex = 1;
+            this.btnSair.TabIndex = 8;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
@@ -99,7 +99,7 @@
             this.ckbMatriculado.Location = new System.Drawing.Point(15, 160);
             this.ckbMatriculado.Name = "ckbMatriculado";
             this.ckbMatriculado.Size = new System.Drawing.Size(92, 17);
-            this.ckbMatriculado.TabIndex = 8;
+            this.ckbMatriculado.TabIndex = 5;
             this.ckbMatriculado.Text = "Matriculado";
             this.ckbMatriculado.UseVisualStyleBackColor = true;
             // 
@@ -119,7 +119,7 @@
             this.cmbCursos.Location = new System.Drawing.Point(200, 115);
             this.cmbCursos.Name = "cmbCursos";
             this.cmbCursos.Size = new System.Drawing.Size(150, 21);
-            this.cmbCursos.TabIndex = 6;
+            this.cmbCursos.TabIndex = 4;
             // 
             // lblDataNascimento
             // 
@@ -137,7 +137,7 @@
             this.dtpDataNascimento.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(150, 20);
-            this.dtpDataNascimento.TabIndex = 4;
+            this.dtpDataNascimento.TabIndex = 3;
             this.dtpDataNascimento.Value = new System.DateTime(2019, 8, 7, 0, 0, 0, 0);
             // 
             // txtRa
@@ -146,7 +146,7 @@
             this.txtRa.MaxLength = 16;
             this.txtRa.Name = "txtRa";
             this.txtRa.Size = new System.Drawing.Size(150, 20);
-            this.txtRa.TabIndex = 3;
+            this.txtRa.TabIndex = 2;
             // 
             // lblRa
             // 
@@ -179,7 +179,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(125, 350);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(85, 23);
-            this.btnLimpar.TabIndex = 4;
+            this.btnLimpar.TabIndex = 7;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);

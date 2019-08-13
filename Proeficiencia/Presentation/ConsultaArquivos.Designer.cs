@@ -53,7 +53,7 @@
             this.rdbTodos.Location = new System.Drawing.Point(312, 26);
             this.rdbTodos.Name = "rdbTodos";
             this.rdbTodos.Size = new System.Drawing.Size(55, 17);
-            this.rdbTodos.TabIndex = 20;
+            this.rdbTodos.TabIndex = 4;
             this.rdbTodos.TabStop = true;
             this.rdbTodos.Text = "Todos";
             this.rdbTodos.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             this.rdbBloqueados.Location = new System.Drawing.Point(217, 26);
             this.rdbBloqueados.Name = "rdbBloqueados";
             this.rdbBloqueados.Size = new System.Drawing.Size(81, 17);
-            this.rdbBloqueados.TabIndex = 19;
+            this.rdbBloqueados.TabIndex = 3;
             this.rdbBloqueados.TabStop = true;
             this.rdbBloqueados.Text = "Bloqueados";
             this.rdbBloqueados.UseVisualStyleBackColor = true;
@@ -77,7 +77,7 @@
             this.rdbValidados.Location = new System.Drawing.Point(127, 26);
             this.rdbValidados.Name = "rdbValidados";
             this.rdbValidados.Size = new System.Drawing.Size(71, 17);
-            this.rdbValidados.TabIndex = 18;
+            this.rdbValidados.TabIndex = 2;
             this.rdbValidados.TabStop = true;
             this.rdbValidados.Text = "Validados";
             this.rdbValidados.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@
             this.rdbValidar.Location = new System.Drawing.Point(32, 26);
             this.rdbValidar.Name = "rdbValidar";
             this.rdbValidar.Size = new System.Drawing.Size(82, 17);
-            this.rdbValidar.TabIndex = 17;
+            this.rdbValidar.TabIndex = 1;
             this.rdbValidar.TabStop = true;
             this.rdbValidar.Text = "Para Validar";
             this.rdbValidar.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@
             this.btnBaixar.Location = new System.Drawing.Point(32, 441);
             this.btnBaixar.Name = "btnBaixar";
             this.btnBaixar.Size = new System.Drawing.Size(90, 23);
-            this.btnBaixar.TabIndex = 13;
+            this.btnBaixar.TabIndex = 6;
             this.btnBaixar.Text = "&Baixar Arquivo";
             this.btnBaixar.UseVisualStyleBackColor = true;
             this.btnBaixar.Click += new System.EventHandler(this.BtnBaixar_Click);
@@ -110,7 +110,7 @@
             this.btnSair.Location = new System.Drawing.Point(652, 441);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(90, 23);
-            this.btnSair.TabIndex = 15;
+            this.btnSair.TabIndex = 7;
             this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
@@ -136,7 +136,7 @@
             this.dtgArquivos.Name = "dtgArquivos";
             this.dtgArquivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgArquivos.Size = new System.Drawing.Size(710, 350);
-            this.dtgArquivos.TabIndex = 12;
+            this.dtgArquivos.TabIndex = 5;
             this.dtgArquivos.TabStop = false;
             // 
             // Id
@@ -221,6 +221,7 @@
             this.Name = "ConsultaArquivos";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaArquivos";
             this.Load += new System.EventHandler(this.ConsultaArquivos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgArquivos)).EndInit();

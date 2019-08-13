@@ -43,7 +43,11 @@ namespace Proeficiencia.Presentation
             {
                 var aluno = _alunoRepository.GetById(Convert.ToInt32(txtId.Text));
 
-                if (aluno == null) throw new Exception("Aluno não encontrado.");
+                if (aluno == null)
+                {
+                    LimparTela();
+                    throw new Exception("Aluno não encontrado.");
+                }
 
                 txtNome.Text = aluno.Nome;
                 txtRa.Text = aluno.RA;
@@ -91,7 +95,11 @@ namespace Proeficiencia.Presentation
         {
             try
             {
-                if (_alunoRepository.GetById(Convert.ToInt32(txtId.Text)) == null) throw new Exception("Aluno não encontrado");
+                if (_alunoRepository.GetById(Convert.ToInt32(txtId.Text)) == null)
+                {
+                    LimparTela();
+                    throw new Exception("Aluno não encontrado.");
+                }
 
                 _alunoRepository.Remove(Convert.ToInt32(txtId.Text));
 
@@ -100,12 +108,12 @@ namespace Proeficiencia.Presentation
             catch (Exception ex)
             {
                 MessageBox.Show
-                    (
-                        $"Erro ao Excluir Aluno: {ex.Message}",
-                        "Aviso Sistema",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error
-                    );
+                (
+                    $"Erro ao Excluir Aluno: {ex.Message}",
+                    "Aviso Sistema",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
 
@@ -122,6 +130,8 @@ namespace Proeficiencia.Presentation
             {
                 var aluno = _alunoRepository.GetById(Convert.ToInt32(txtId.Text));
 
+                if (aluno == null) throw new Exception("Aluno não encontrada.");
+
                 aluno.Nome = txtNome.Text;
                 aluno.RA = txtRa.Text;
                 aluno.Nascimento = dtpDataNascimento.Value;
@@ -132,9 +142,15 @@ namespace Proeficiencia.Presentation
 
                 LimparTela();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show
+                (
+                    $"Erro ao Alterar Aluno: {ex.Message}",
+                    "Aviso Sistema",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
     }
